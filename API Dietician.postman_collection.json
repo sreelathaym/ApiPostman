@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "d3d12bb3-69d7-49a2-b212-50c0c6a6ac37",
+		"name": "API Dietician",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37330667"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearer-token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"password\": \"test\",\n  \"userLoginEmail\": \"Team4@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dietician-july-api-hackathon-80f2590665cc.herokuapp.com/dietician/login",
+					"protocol": "https",
+					"host": [
+						"dietician-july-api-hackathon-80f2590665cc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"dietician",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LogOut",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Create dietician",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearer-token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ContactNumber\": \"0123777888\",\n  \"DateOfBirth\": \"1990-07-26T18:14:08.570Z\",\n  \"Education\": \"Dietician_Sugar\",\n  \"Email\": \"DieticianDiet123@gmail.com\",\n  \"Firstname\": \"John\",\n  \"HospitalCity\": \"Califoria\",\n  \"HospitalName\": \"DietControl\",\n  \"HospitalPincode\": \"123456\",\n  \"HospitalStreet\": \"NationalBlvd\",\n  \"Lastname\": \"Jack\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/dietician\n",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"dietician\n"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
